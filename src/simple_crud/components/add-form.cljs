@@ -4,8 +4,7 @@
             [goog.dom :as dom]
             [simple-crud.actions :refer [add-user]]))
 
-(defn add-form
-  []
+(defn add-form []
   (let [user (r/atom {:name "" :username ""})
         validate-user #(and (not (s/blank? %1)) (not (s/blank? %2)))]
     [:div

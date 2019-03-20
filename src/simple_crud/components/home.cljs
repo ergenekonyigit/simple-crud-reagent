@@ -4,8 +4,7 @@
             [simple-crud.components.edit-form :refer [edit-form]]
             [simple-crud.components.user-table :refer [user-table]]))
 
-(defn home
-  []
+(defn home []
   [:div.container
    [:h1 "Simple CRUD App with ClojureScript and Reagent"]
    [:a {:href "#/about"} "About"]

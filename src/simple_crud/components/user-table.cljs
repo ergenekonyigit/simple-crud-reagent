@@ -2,8 +2,7 @@
   (:require [simple-crud.db :refer [app-state]]
             [simple-crud.actions :refer [edit-row delete-user]]))
 
-(defn user-table
-  [users]
+(defn user-table [users]
   [:table
    [:thead
     [:tr

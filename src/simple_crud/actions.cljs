@@ -3,8 +3,7 @@
             [simple-crud.helpers :refer [uuid]]))
 
 
-(defn reset
-  []
+(defn reset []
   (swap! app-state assoc :editing false)
   (swap! app-state assoc :current-user {}))
 

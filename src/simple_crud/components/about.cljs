@@ -1,7 +1,6 @@
 (ns simple-crud.components.about)
 
-(defn about
-  []
+(defn about []
   [:div.container
    [:h1 "About Page"]
    [:li

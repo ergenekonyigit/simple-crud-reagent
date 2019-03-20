@@ -7,8 +7,7 @@
             [simple-crud.components.home :refer [home]]
             [simple-crud.components.about :refer [about]]))
 
-(defn hook-browser-navigation!
-  []
+(defn hook-browser-navigation! []
   (doto (Html5History.)
     (events/listen
      EventType/NAVIGATE
@@ -17,16 +16,13 @@
     (.setEnabled true)))
 
 
-(defn app-routes
-  []
+(defn app-routes []
   (secretary/set-config! :prefix "#")
 
-  (secretary/defroute "/"
-    []
+  (secretary/defroute "/" []
     (swap! app-state assoc :page :home))
 
-  (secretary/defroute "/about"
-    []
+  (secretary/defroute "/about" []
     (swap! app-state assoc :page :about))
 
   (hook-browser-navigation!))
